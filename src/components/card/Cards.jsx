@@ -1,26 +1,10 @@
-import React, { useState } from "react";
-import data from "../../data/data.json";
 import Card from "../profile/Card.jsx";
 import "./cards.css";
-function Cards() {
-  console.log(data);
-
-  const [search, setSearch] = useState(data);
+function Cards({ data }) {
   return (
     <div className="cards" id="cards">
-      {search.map((user) => {
-        return (
-          <Card
-            name={user.name}
-            organization={user.organization}
-            attacksCount={user.attacksCount}
-            status={user.status}
-            relationToIsraelSummary={user.relationToIsraelSummary}
-            imageUrl={user.imageUrl}
-            search={search}
-            setSearch={setSearch}
-          ></Card>
-        );
+      {data.map((user) => {
+        return <Card {...user}></Card>;
       })}
     </div>
   );
