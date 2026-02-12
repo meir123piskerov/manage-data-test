@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.card-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  border-radius: 50%;
+  height: 150px;
+}
