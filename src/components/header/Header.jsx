@@ -10,13 +10,6 @@ function Header() {
   const [data, setData] = useState([...data2]);
 
   function SearchDangerous() {
-    // const filterStatus = data.filter((obj) =>
-    //   obj.status
-    //     .toLocaleLowerCase()
-    //     .includes("active")
-    //     .filter((obj) => obj.attacksCount > 15)
-    //     .filter((obj) => obj.imageUrl !== null),
-    // );
     const mostDangerous = data2
       .filter((t) => t.imageUrl && t.status === "active")
       .sort((a, b) => b.attacksCount - a.attacksCount)[0];
